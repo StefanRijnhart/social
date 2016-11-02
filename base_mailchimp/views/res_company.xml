@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_company_form" model="ir.ui.view">
+            <field name="name">Add Mailchimp API key to company form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Configuration']/group" position="inside">
+                    <group name="mailchimp" string="Mailchimp" groups="base.group_system">
+                        <field name="mailchimp_key"/>
+                        <button name="mailchimp_test" string="Validate API key" type="object"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
