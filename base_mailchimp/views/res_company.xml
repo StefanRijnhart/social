@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//page[@string='Configuration']/group" position="inside">
                     <group name="mailchimp" string="Mailchimp" groups="base.group_system">
-                        <field name="mailchimp_key"/>
+                        <field name="mailchimp_key" password="1"/>
                         <button name="mailchimp_test" string="Validate API key" type="object"/>
                     </group>
                 </xpath>

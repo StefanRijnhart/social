@@ -13,7 +13,7 @@ from openerp.tools.translate import _
 class Company(models.Model):
     _inherit = 'res.company'
     mailchimp_key = fields.Char(
-        'Mailchimp API V3.0 Key', groups="base.group_system", password=True)
+        'Mailchimp API V3.0 Key', groups="base.group_system")
 
     @api.multi
     def mailchimp_test(self):
